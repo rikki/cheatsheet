@@ -1,0 +1,4 @@
+--- 
+checkyaml: |
+  perl -MYAML  -e 'use Data::Dumper; $p = YAML::LoadFile("config.yaml"); print Dumper $p;'
+
