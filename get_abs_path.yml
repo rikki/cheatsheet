@@ -1,4 +1,0 @@
---- 
-get_abs_path: |
-  baseDirForScriptSelf=$(cd "$(dirname "$0")"; pwd)
-
