@@ -1,0 +1,5 @@
+--- 
+mdadm: |
+  mdadm --create /dev/md0 /dev/fioa /dev/fiob --level 0 --raid-devices=2
+  mdadm --detail --scan > /etc/mdadm.conf
+

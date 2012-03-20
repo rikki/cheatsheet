@@ -1,0 +1,12 @@
+--- 
+ipmi: |
+  #get channel id
+  for i in 0 1 2 3 4 5 6 7 8 9 ; do 
+  ipmitool channel info $i | grep -q "802.3" && cid=$i && break; 
+  done;
+  echo $cid
+  
+  #get user id
+  uid=`ipmitool user list $cid | awk '{if ($7 ~ "ADMINISTRATOR" || $6 ~ "ADMINISTRATOR") { print $1; exit}}'`; 
+  echo $uid
+

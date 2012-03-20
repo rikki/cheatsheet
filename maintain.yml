@@ -1,0 +1,7 @@
+--- 
+maintain: |
+  select brand,model,sum(hdd) as shdd,sum(mb) as smb,sum(ram) as ram,sum(mgnt) as mgnt,sum(raid) as raid,sum(other) as other,sum(hw_ch) as hw_ch,sum(hdd) + sum(mb)  as total from maintain group by model order by brand;
+  
+  #getSumByMonth
+  (select brand,'TOTAL'as model,sum(hdd),sum(mb),sum(ram),sum(mgnt),sum(raid),sum(other),sum(hdd)+sum(mb)+sum(ram)+sum(mgnt)+sum(raid)+sum(other) as total,sum(hw_ch) from maintain where s_time >= 20100401 and s_time < 20100501 group by brand) union (select brand,model,sum(hdd),sum(mb),sum(ram),sum(mgnt),sum(raid),sum(other),sum(hdd)+sum(mb)+sum(ram)+sum(mgnt)+sum(raid)+sum(other) as total,sum(hw_ch) from maintain where s_time >= 20100401 and s_time < 20100501 group by model) order by brand,model desc;
+

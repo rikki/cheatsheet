@@ -1,0 +1,7 @@
+--- 
+hpacucli: |
+  hpacucli ctrl all show
+  hpacucli ctrl all show config detail
+  hpacucli ctrl slot=1 pd all show
+  hpacucli ctrl slot=1 ld all show
+

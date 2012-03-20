@@ -1,0 +1,4 @@
+--- 
+tcpdump: |
+  sudo tcpdump -nn -i en0 port 53
+

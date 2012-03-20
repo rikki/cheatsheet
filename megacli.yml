@@ -1,0 +1,24 @@
+--- 
+megacli: |
+  #show raid
+  MegaCli -LdInfo -Lall -aAll
+  MegaCli -PDList -aALL
+  MegaCli -LdPdInfo -aAll
+  MegaCli -AdpAllInfo -aALL
+  #rebuild progress
+  MegaCli -PDRbld -ShowProg -PhysDrv [1:5] -a0
+  #dynamic progress
+  MegaCli -PDRbld -ProgDsply -PhysDrv [1:5] -a0
+  
+  #report
+  MegaCli -AdpAllInfo -aALL >adpinfo
+  MegaCli -AdpBbuCmd -GetBbuStatus -aALL >adpbbu
+  MegaCli -AdpEventLog -GetEvents -f mr_AdpEventLog.txt -aALL >eventlog
+  MegaCli -CfgDsply -aALL >cfginfo
+  MegaCli -EncInfo -aALL >encinfo
+  MegaCli -FwTermLog -Dsply -aALL >fwtermlog
+  MegaCli -LDInfo -Lall -aALL >ldinfo
+  MegaCli -LdPdInfo -aALL >ldpdinfo
+  MegaCli -PDList -aALL >pdlist
+  modinfo megaraid_sas >modinfo
+

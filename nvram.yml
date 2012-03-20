@@ -1,0 +1,4 @@
+--- 
+nvram: |
+  sudo nvram boot-args="arch=x86_64 -v"
+

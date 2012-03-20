@@ -1,0 +1,4 @@
+--- 
+man2pdf: |
+  man -t foo_manpage | ps2pdf14 - foo_manpage.pdf 
+

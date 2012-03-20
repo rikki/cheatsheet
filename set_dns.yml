@@ -1,0 +1,4 @@
+--- 
+set_dns: |
+  sudo networksetup -setdnsservers <networkservice> DNS1, DNS2, DNS3
+

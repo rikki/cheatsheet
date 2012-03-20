@@ -1,0 +1,7 @@
+--- 
+xfs: |
+  mkfs.xfs -dsu=128k -dsw=3 -dagsize=377487232k -f /dev/sda3
+  
+  # mount options
+  LABEL=/data1        /data1          xfs barrier=0,noatime,nodiratime    1 2
+

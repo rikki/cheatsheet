@@ -1,0 +1,5 @@
+--- 
+mencoder: |
+  #anything to mp4(mobile)
+  mencoder -of lavf -lavfopts format=mp4 -oac lavc -ovc lavc -lavcopts aglobal=1:vglobal=1:vcodec=mpeg4:vbitrate=600:acodec=libfaac:abitrate=128 -af lavcresample=22050 -vf dsize=480:-10:0,scale=0:0,expand=480:-10,harddup -ofps 25 -srate 22050 source_file -o target_file
+
