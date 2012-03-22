@@ -1,0 +1,5 @@
+--- 
+flashcache: |
+  flashcache_destroy ssd_devname -f
+  flashcache_create -p back cachedev /dev/md0 /dev/sdb1; 
+
