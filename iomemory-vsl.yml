@@ -1,0 +1,6 @@
+--- 
+iomemory-vsl: |
+  options iomemory-vsl use_workqueue=0
+  options iomemory-vsl disable-msi=0
+  options iomemory-vsl use_large_pcie_rx_buffer=1
+
