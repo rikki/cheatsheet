@@ -2,4 +2,6 @@
 flashcache: |
   flashcache_destroy ssd_devname -f
   flashcache_create -p back cachedev /dev/md0 /dev/sdb1; 
+  echo 0 > /proc/sys/dev/flashcache/md0+sdb1/fast_remove
+  dmsetup remove cachedev
 
