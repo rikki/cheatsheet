@@ -4,4 +4,11 @@ flashcache: |
   flashcache_create -p back cachedev /dev/md0 /dev/sdb1; 
   echo 0 > /proc/sys/dev/flashcache/md0+sdb1/fast_remove
   dmsetup remove cachedev
+  
+  insmod /lib/modules/2.6.18-274.7.1.el5/extra/flashcache/flashcache.ko
+  flashcache_load cachedev /dev/md0 /dev/cciss/c0d0p3
+  echo 90 > /proc/sys/dev/flashcache/md0+c0d0p3/dirty_thresh_pct
+  echo 1 > /proc/sys/dev/flashcache/md0+c0d0p3/fast_remove
+  echo 1 > /proc/sys/dev/flashcache/md0+c0d0p3/reclaim_policy
+  mount -o rw,noatime,nodiratime,barrier=0 /dev/mapper/cachedev /data
 
