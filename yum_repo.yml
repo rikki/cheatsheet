@@ -3,4 +3,6 @@ yum_repo: |
   wget http://10.9.16.10:280/repos/tools/setup_client_repo.sh
   bash setup_client_repo.sh all
   yum install  xxxxxxxx
+  
+  epel5: rpm -ivh http://download.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm
 
