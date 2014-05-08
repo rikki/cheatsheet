@@ -1,0 +1,11 @@
+--- 
+rubygems: "$ gem sources --remove https://rubygems.org/\n\
+  $ gem sources -a https://ruby.taobao.org/\n\
+  $ gem sources -l\n\
+  *** CURRENT SOURCES ***\n\
+  https://ruby.taobao.org\n\
+  $ gem install rails\n\n\
+  \xE5\xA6\x82\xE6\x9E\x9C\xE4\xBD\xA0\xE6\x98\xAF\xE7\x94\xA8 Bundle (Rails \xE9\xA1\xB9\xE7\x9B\xAE)\n\
+  source 'https://ruby.taobao.org/'\n\
+  gem 'rails', '4.1.0'\n\
+  ...\n"
