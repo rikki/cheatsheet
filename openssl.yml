@@ -1,0 +1,8 @@
+--- 
+openssl: |
+  openssl req -newkey rsa:2048 -new -x509 -keyout eggpain_private_cakey.pem -subj '/CN=Eggpain Certification Authority/O=Eggpain Us./C=CN/OU=Eggpain CA/ST=Beijing/L=Beijing/emailAddress=support@eggpain.us' -out cacert.pem -days 10950
+  
+  openssl req -newkey rsa:2048 -new -nodes -keyout private_stunnel.pem -subj '/CN=stunnel.eggpain.us/O=Eggpain Us./C=CN' -out stunnel.csr -days 7300
+  
+  openssl ca -keyfile eggpain_private_cakey.pem -cert cacert.pem -days 3650 -extensions client -batch -policy policy_anything -out stunnel.pem -infiles stunnel.csr
+
