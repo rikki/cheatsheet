@@ -1,5 +1,4 @@
---- 
+---
 dnsc: |
   OS X: How to reset the DNS cache
-  sudo killall -HUP mDNSResponder
-
+  sudo discoveryutil udnsflushcaches
