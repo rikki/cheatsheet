@@ -1,4 +1,5 @@
 ---
 pandorabox: |2
    opkg --force-removal-of-dependent-packages --force-overwrite --nocase update
-   for pkg in `opkg list-upgradable | cut -d' ' -f1` | grep -v Multiple; do opkg upgrade $pkg; done
+
+   for pkg in `opkg list-upgradable|cut -d' ' -f1`|grep -v Multiple;do opkg upgrade $pkg;done
