@@ -1,0 +1,3 @@
+---
+pandorabox: |2
+   opkg --force-removal-of-dependent-packages --force-overwrite --nocase update
