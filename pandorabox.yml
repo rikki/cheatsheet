@@ -1,3 +1,4 @@
 ---
 pandorabox: |2
    opkg --force-removal-of-dependent-packages --force-overwrite --nocase update
+   opkg list-upgradable | awk -F ' - ' '{print $1}' | xargs opkg upgrade
