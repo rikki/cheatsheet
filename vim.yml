@@ -1,3 +1,4 @@
 ---
 vim: |
   :w !sudo tee %
+  :%s/old/new/gc - replace all old with new throughout file with confirmations
