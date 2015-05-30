@@ -3,3 +3,20 @@ pandorabox: |2
    opkg --force-removal-of-dependent-packages --force-overwrite --nocase update
 
    for pkg in `opkg list-upgradable|cut -d' ' -f1|grep -v Multiple`;do opkg upgrade $pkg;done
+
+  opkg source list:
+   dest root /
+   dest ram /tmp
+   lists_dir ext /var/opkg-lists
+   option overlay_root /overlay
+   src/gz 14.09_base http://downloads.openwrt.org.cn/PandoraBox/ralink/packages/base
+   src/gz 14.09_telephony http://downloads.openwrt.org/barrier_breaker/14.07/ramips/mt7620a/packages/telephony
+   src/gz 14.09_packages http://downloads.openwrt.org/barrier_breaker/14.07/ramips/mt7620a/packages/packages
+   src/gz 14.09_routing http://downloads.openwrt.org/barrier_breaker/14.07/ramips/mt7620a/packages/routing
+   src/gz 14.09_management http://downloads.openwrt.org/barrier_breaker/14.07/ramips/mt7620a/packages/management
+   src/gz 14.09_oldpackages http://downloads.openwrt.org/barrier_breaker/14.07/ramips/mt7620a/packages/oldpackages
+   src/gz openwrt_dist http://openwrt-dist.kxswq.ml/releases/ramips/packages
+   src/gz openwrt_dist_luci http://openwrt-dist.kxswq.ml/releases/luci/packages
+   arch ralink 1
+   arch all 2
+   arch ramips_24kec 3
