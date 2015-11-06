@@ -1,4 +1,3 @@
---- 
+---
 shannon_internal: |
-  ssh -L *:8080:127.0.0.1:8123 app.shannon-data.com
-
+  ssh -L *:8080:127.0.0.1:8123 mail.shannon-data.com
