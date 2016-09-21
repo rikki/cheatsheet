@@ -1,4 +1,5 @@
 ---
 gatekeeper: |
+  # allow apps from everywhere
   sudo spctl --master-disable
   sudo spctl --master-enable
