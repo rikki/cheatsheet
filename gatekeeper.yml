@@ -1,0 +1,4 @@
+---
+gatekeeper: |
+  sudo spctl --master-disable
+  sudo spctl --master-enable
